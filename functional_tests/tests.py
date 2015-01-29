@@ -72,6 +72,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertNotIn('Buy peacock feathers', page_text)
         self.assertNotIn('make a fly', page_text)
 
+
         #Francis comienza una nueva lista
         #Es menos interesante que Edith
         inputbox = self.browser.find_element_by_id('id_new_item')
