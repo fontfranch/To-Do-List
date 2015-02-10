@@ -86,12 +86,12 @@ class NewVisitorTest(LiveServerTestCase):
 
         #Volvemos a comprobar que no hay rastro de Edith
         page_text = self.browser.find_element_by_tag_name('body').text
-        self.assertnotIn('Buy peacock feathers',page_text)
+        self.assertNotIn('Buy peacock feathers',page_text)
         self.assertIn('Buy milk', page_text)
 
         #Satisfecho, ambos se acuestan
         
-        self.fail('Finish the test')
+        #self.fail('Finish the test')
 
         #visita a la web, la lista sigue en su sitio
 
