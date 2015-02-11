@@ -97,5 +97,31 @@ class NewVisitorTest(LiveServerTestCase):
 
         #fin de la visita.
 
+    def test_layout_and_styling(self):
+
+        #Edith va la pagina principal
+        self.browser.get(self.live_server_url)
+        self.browser.set_window_size(1024,768)
+
+        #Se da cuenta de que la entrada de datos esta entrada
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        self.assertAlmostEqual(
+            inputbox.location['x']+inputbox.size['width'] / 2,
+            512,
+            delta=5
+        )
+
+        #Comienza una nueva lista y se percata de que la entrada de texto
+        #esta igual de primorosamente centrada
+        inputbox.send_keys('testing\n')
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        self.assertAlmostEqual(
+            inputbox.location['x']+inputbox.size['width'] / 2,
+            512,
+            delta=5
+        )
+        
+        
+
 
 
