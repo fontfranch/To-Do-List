@@ -24,7 +24,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['fontfanch.pythonanywhere.com']
+ALLOWED_HOSTS = ['fontfranch.pythonanywhere.com']
 
 
 # Application definition
